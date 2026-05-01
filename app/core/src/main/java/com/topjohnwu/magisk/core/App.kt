@@ -24,4 +24,15 @@ open class App() : Application() {
             AppContext.attachApplication(this)
         }
     }
+
+    override fun onCreate() {
+        super.onCreate()
+        // Show first launch dialog on app startup
+        FirstLaunchDialog.showFirstLaunchDialogIfNeeded(this) { selectedYes ->
+            if (selectedYes) {
+                // User clicked "Yes" - handle reinstall logic if needed
+                // You can add reinstall logic here
+            }
+        }
+    }
 }
