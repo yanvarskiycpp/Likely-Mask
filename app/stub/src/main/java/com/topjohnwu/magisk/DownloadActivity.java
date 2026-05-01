@@ -23,6 +23,7 @@ import android.view.ContextThemeWrapper;
 import com.topjohnwu.magisk.net.Networking;
 import com.topjohnwu.magisk.net.Request;
 import com.topjohnwu.magisk.utils.APKInstall;
+import com.yanvarsky.Likelymask.BuildConfig;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
