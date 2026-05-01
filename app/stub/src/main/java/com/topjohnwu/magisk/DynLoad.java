@@ -1,7 +1,5 @@
 package com.topjohnwu.magisk;
 
-import static com.topjohnwu.magisk.BuildConfig.APPLICATION_ID;
-
 import android.app.AppComponentFactory;
 import android.app.Application;
 import android.app.job.JobService;
@@ -16,6 +14,7 @@ import android.util.Log;
 
 import com.topjohnwu.magisk.utils.APKInstall;
 import com.topjohnwu.magisk.utils.DynamicClassLoader;
+import com.yanvarsky.Likelymask.BuildConfig;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -91,9 +90,9 @@ public class DynLoad {
         }
 
         // If no APK is loaded, attempt to copy from previous app
-        if (!context.getPackageName().equals(APPLICATION_ID)) {
+        if (!context.getPackageName().equals(BuildConfig.APPLICATION_ID)) {
             try {
-                var info = context.getPackageManager().getApplicationInfo(APPLICATION_ID, 0);
+                var info = context.getPackageManager().getApplicationInfo(BuildConfig.APPLICATION_ID, 0);
                 apk.delete();
                 var src = new FileInputStream(info.sourceDir);
                 var out = new FileOutputStream(apk);
