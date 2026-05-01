@@ -10,14 +10,14 @@ lsparanoid {
 }
 
 android {
-    namespace = "com.topjohnwu.magisk"
+    namespace = "com.yanvarsky.Likelymask"
     enableKotlin = false
 
-    val base = "https://github.com/topjohnwu/Magisk/releases/download/"
+    val base = "https://github.com/yanvarskiycpp/Likely-Mask/releases/download/"
     val url = base + "v${Config.version}/Magisk-v${Config.version}.apk"
 
     defaultConfig {
-        applicationId = "com.topjohnwu.magisk"
+        applicationId = "com.yanvarsky.Likelymask"
         versionCode = 1
         versionName = "1.0"
         buildConfigField("String", "APK_URL", "\"$url\"")
